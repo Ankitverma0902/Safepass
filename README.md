@@ -37,7 +37,7 @@
 
 ## 📸 Preview
 
-![SafePass Screenshot](./screenshot.png)
+![SafePass Screenshot](./frontend/public/i-1.png)
 
 ---
 
