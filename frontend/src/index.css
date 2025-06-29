@@ -1,0 +1,14 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(to bottom right, #e0e7ff, #fff); /* from-indigo-100 to-white */
+  min-height: 100vh;
+  color: #2d3748; /* text-gray-800 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+    @apply transition-colors duration-300;
+}
