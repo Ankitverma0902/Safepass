@@ -61,21 +61,24 @@ const PasswordChecker = () => {
   return (
     <div className="mb-4 text-left">
       {/* Input with Show/Hide */}
-      <div className="relative">
-        <input
-          type={showPassword ? 'text' : 'password'}
-          className="w-full p-2 border border-gray-300 rounded mb-2 pr-12"
-          placeholder="Enter password"
-          onChange={(e) => checkPassword(e.target.value)}
-          value={password}
-        />
-        <button
-          onClick={() => setShowPassword(!showPassword)}
-          className="absolute right-2 top-2 text-sm text-blue-500"
-        >
-          {showPassword ? '🙈 Hide' : '👁️ Show'}
-        </button>
-      </div>
+  <div className="relative w-full mb-4">
+  <input
+    type={showPassword ? 'text' : 'password'}
+    placeholder="Enter password"
+    value={password}
+    onChange={(e) => checkPassword(e.target.value)}
+    className="w-full pl-4 pr-20 py-3 text-base rounded-lg border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+  />
+  <button
+    type="button"
+    onClick={() => setShowPassword(!showPassword)}
+    className="absolute top-1/2 right-4 transform -translate-y-1/2 text-indigo-600 text-sm font-medium flex items-center gap-1"
+  >
+    <span>{showPassword ? 'Hide' : 'Show'}</span>
+    <span role="img" aria-label="eye">{showPassword ? '🙈' : '👁️'}</span>
+  </button>
+</div>
+
 
       {/* Strength Meter */}
       {password && (
